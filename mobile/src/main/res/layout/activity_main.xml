@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.xiangzi.clock_miui.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.xiangzi.miui_clock.ClockView
+            android:id="@+id/clock"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_tile"
+            android:orientation="vertical"
+            android:padding="50dp"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.xiangzi.miui_clock.TileTextView
+                android:text="Button"
+                android:textSize="22sp"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <com.xiangzi.miui_clock.TileButton
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                style="@style/AlertDialog.AppCompat.Light"
+                android:background="@color/white"
+                android:text="hellow,shit"
+                android:layout_height="50dp" />
+            <com.xiangzi.miui_clock.TileTextView
+                android:text="ImageView"
+                android:textSize="22sp"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <com.xiangzi.miui_clock.TileImageView
+                android:layout_marginTop="50dp"
+                android:layout_width="150dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/ic_launcher_round"
+                android:layout_height="150dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>
